@@ -1,7 +1,7 @@
 pluginManagement {
 	repositories {
 		maven {
-			name = 'MilkChoice'
+			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
 		mavenCentral()
