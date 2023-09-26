@@ -6,5 +6,6 @@ public class ExampleMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ItemRegistry.registerModItems();
+        ModItemGroups.registerModItemGroups();
     }
 }
