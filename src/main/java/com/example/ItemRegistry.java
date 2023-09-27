@@ -18,7 +18,7 @@ public class ItemRegistry {
 
     static {
         // アイテムを登録
-        items.add(registerItem("tes_item", new Item(new FabricItemSettings())))
+        items.add(registerItem("tes_item", new Item(new FabricItemSettings())));
         items.add(registerItem("tes_item2", new Item(new FabricItemSettings())));
     }
 
