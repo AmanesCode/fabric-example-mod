@@ -9,6 +9,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.Block;
 
 
 public class ModItemGroups {
@@ -22,8 +24,12 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemGroup." + ModConfig.MOD_ID))
                     .icon(() -> new ItemStack(ItemRegistry.items.get(0)))
                     .entries((displayContext, entries) -> {
+                        for (Block block : BlockRegistry.blocks) {
+                            entries.add(block);
+                        }
                         for (Item item : ItemRegistry.items) {
                             entries.add(item);
+                            System.out.println(item.getName().getString());
                         }
                         entries.add(Items.MILK_BUCKET);
                     }).build());

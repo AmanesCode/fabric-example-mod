@@ -1,0 +1,6 @@
+{
+  "parent": "block/",
+  "textures": {
+    "all": "milk_choice:block/tes_block"
+  }
+}

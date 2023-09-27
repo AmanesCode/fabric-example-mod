@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class ItemRegistry {
 
     // アイテムを登録するためのリスト
-    public static ArrayList<Item> items = new ArrayList<Item>();
+    public static final ArrayList<Item> items = new ArrayList<Item>();
 
     static {
         // アイテムを登録
@@ -30,7 +30,6 @@ public class ItemRegistry {
 
     // アイテムを登録するメソッド
     public static Item registerItem(String name, Item item) {
-        // itemDataからアイテムを登録
         return Registry.register(Registries.ITEM, new Identifier(ModConfig.MOD_ID, name), item);
     }
 
