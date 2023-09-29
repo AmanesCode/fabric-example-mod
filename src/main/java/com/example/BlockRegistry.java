@@ -16,22 +16,33 @@ public class BlockRegistry {
     // ブロックを登録するためのリスト
     public static final ArrayList<Block> blocks = new ArrayList<Block>();
 
+    public static final Block TES_BLOCK =
+            registerBlock("tes_block", new Block(FabricBlockSettings.copy(Blocks.STONE)));
+
+    public static final Item TES_BLOCK_ITEM = registerBlockItem("tes_block", TES_BLOCK);
     static {
-        Block TES_BLOCK =
-                registerBlock("tes_block", new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
         blocks.add(TES_BLOCK);
-        ItemRegistry.items.add(registerBlockItem("tes_block", TES_BLOCK));
     }
+
 
     // ブロックを登録するメソッド
     public static Block registerBlock(String name, Block block) {
-        return Registry.register(Registries.BLOCK, new Identifier(ModConfig.MOD_ID, name), block);
+        Registry.register(Registries.BLOCK, new Identifier(ModConfig.MOD_ID, name), block);
+        return block;
     }
 
     // ブロックアイテムを登録するメソッド
     public static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(ModConfig.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
+    }
+
+    public static void registerModBlocks() {
+
+        String templateString = "Registering Mod Blocks for " + ModConfig.MOD_NAME;
+        System.out.println(templateString);
+        ModConfig.LOGGER.info(templateString);
+
     }
 }
 

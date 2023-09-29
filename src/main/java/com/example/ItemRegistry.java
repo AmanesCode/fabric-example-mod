@@ -34,8 +34,9 @@ public class ItemRegistry {
     }
 
     public static void registerModItems() {
-        System.out.println("Hello Fabric world!");
-        ModConfig.LOGGER.info("Registering Mod Items for " + ModConfig.MOD_NAME);
+        String templateString = "Registering Mod Items for " + ModConfig.MOD_NAME;
+        System.out.println(templateString);
+        ModConfig.LOGGER.info(templateString);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
                 .register(ItemRegistry::addItemsToIngredientItemGroupe);

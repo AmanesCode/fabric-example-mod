@@ -1,5 +1,7 @@
 {
   "variants": {
-    "normal": { "model": "milk_choice:block/tes_block" }
+    "": {
+      "model": "milk_choice:block/tes_block"
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "parent": "block/",
+  "parent": "block/cube_all",
   "textures": {
     "all": "milk_choice:block/tes_block"
   }
