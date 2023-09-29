@@ -7,6 +7,7 @@ public class ExampleMod implements ModInitializer {
     public void onInitialize() {
         BlockRegistry.registerModBlocks();
         ItemRegistry.registerModItems();
+        EffectRegistry.registerModStatusEffects();
 
         ModItemGroups.registerModItemGroups();
 
