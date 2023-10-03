@@ -5,9 +5,11 @@ import net.fabricmc.api.ModInitializer;
 public class ExampleMod implements ModInitializer {
     @Override
     public void onInitialize() {
+        EffectRegistry.registerModStatusEffects();
+        HookshotEntity.registerHookshotEntity();
+
         BlockRegistry.registerModBlocks();
         ItemRegistry.registerModItems();
-        EffectRegistry.registerModStatusEffects();
 
         ModItemGroups.registerModItemGroups();
 
